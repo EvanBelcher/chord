@@ -1,0 +1,74 @@
+
+<!DOCTYPE HTML>
+
+<head>
+    <title>Chord - Notes and notes in perfect harmony</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="Notes and notes in perfect harmony">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+        
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#home">Chord</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+
+        </div>   
+
+            <div class="collapse navbar-collapse" id="nav-collapse">
+<!-- Individual Navbar elements -->
+            <ul class="nav navbar-nav navbar-right">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#upload">Upload</a></li>
+            <li><a href="#record">Record</a></li>
+            <li><a href="#collection">Collection</a></li>
+            <li><a href="account"></a></li>
+            </ul>
+            </div> 
+    </div> 
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 well well-xs" id="info-form">
+            <form action="info.php" method="post">
+    <h2 class="text-center primary-text">Create your Chord Account</h2>
+    <!-- Input fields -->
+    Name
+    <input class="form-control" type="text" id="name" name="name" placeholder="Name"/ required>
+    Email Address
+    <input class="form-control" type="email" id="email" name="email-address" placeholder="Email Address" required/><br/>
+    Choose a Password
+    <input class="form-control" type="password" id="password" name="password" placeholder="Create Password" required/>
+    Confirm Password
+    <input class="form-control" type="password" id="confirm" name="confirm-password" placeholder="Re-enter Password" required/>
+    </form>
+    <br/>
+    <button class="btn btn-md btn-default center-block" type="submit">Create Account</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+        <a href="https://www.twitter.com/codenamequet" target="_blank"><img src="twitter-circle.png" alt="Follow me on Twitter"></a>
+        <a href="https://www.github.com/codenamequet" target="_blank"><img src="github32.png" alt="Check out My Code on Github"></a>
+    </footer>
+
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
