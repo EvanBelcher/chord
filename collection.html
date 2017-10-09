@@ -16,6 +16,32 @@
             border: 3px solid rgb(66, 103, 124);
         }
     </style>
+
+    <script>
+            var config = {
+                    apiKey: 'AIzaSyBtcYTKelRm0Cr5Onm9NGhmDC4gZyagXes',
+                    authDomain: 'chord-2655c.firebaseapp.com',
+                    databaseURL: 'https://chord-2655c.firebaseio.com',
+                    storageBucket: 'gs://chord-2655c.appspot.com/'
+                };
+                firebase.initializeApp(config);
+                // Get a reference to the storage service, which is used to create references in your storage bucket
+                var storage = firebase.storage();
+                // Create a storage reference from our storage service
+                var storageRef = storage.ref();
+
+                storageRef.child('Legends Never Die (ft. Against The Current) - League of Legends - Subtítulos en español.mp3').getDownloadURL().then(function (url) {
+                        // `url` is the download URL for 'images/stars.jpg'
+
+                        // This can be downloaded directly:
+                        var xhr = new XMLHttpRequest();
+                        xhr.responseType = 'blob';
+                        xhr.onload = function (event) {
+                            var blob = xhr.response;
+                        };
+                        xhr.open('GET', url);
+                        xhr.send();
+    </script>
 </head>
 
 <body>
