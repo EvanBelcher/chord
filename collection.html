@@ -9,6 +9,13 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .center {
+            text-align: center;
+            border: 3px solid rgb(66, 103, 124);
+        }
+    </style>
 </head>
 
 <body>
@@ -50,7 +57,36 @@
     </div> <!-- Container fluid-->
 
 </nav>
-  
+<body>
+    <div class="center">
+        <audio id="myAudio" controls>
+            <source src="audio/music.mp3" type="audio/mpeg">
+        </audio>
+        <p></p>
+        <button onclick="myFunction()" type="button">Add a comment</button>
+        <p></p>
+        <pre id=whereToPrint></pre>
+    </div>
+    <script>
+        var x = document.getElementById("myAudio");
+        function myFunction() {
+            var username = prompt("Please enter your username:", "");
+            var timestamp = Math.floor(x.currentTime);
+            var comment = prompt("Enter your comment here", "");
+            var comments = [{ username, timestamp, comment }];
+            var commentHTML = "User: " + username + '\n'
+                + "Timestamp: " + timestamp + '\n'
+                + "Comment: " + comment + '\n';
+
+            var entryLine = document.getElementById('whereToPrint');
+            var newEntry = '<p>' + commentHTML + '</p>';
+            entryLine.insertAdjacentHTML('beforeend', newEntry);
+
+        }
+    </script>
+
+</html>
+
     <footer class="footer">
         <a href="https://www.twitter.com/codenamequet" target="_blank"><img src="img/twitter-circle.png" alt="Follow me on Twitter"></a>
         <a href="https://www.github.com/codenamequet" target="_blank"><img src="img/github32.png" alt="Check out My Code on Github"></a>
