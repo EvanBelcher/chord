@@ -2,6 +2,9 @@
 	color: black;
 	border-bottom: 100px;
 }
+body{
+  padding-top: 50px;
+}
 .carousel-caption {
 	font-size: 24px;
 }
